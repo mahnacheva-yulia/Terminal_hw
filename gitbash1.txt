@@ -1,0 +1,90 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я -  pwd
+
+2) Создать папку - mkdir homework_1
+
+3) Зайти в папку - cd homework_1
+
+4) Создать 3 папки - mkdir work_1 work_2 work_3
+
+5) Зайти в любоую папку cd work_1
+
+6) Создать 5 файлов (3 txt, 2 json) -
+ touch w1.txt w2.txt h1.json h2.json
+nano посмотреть   
+или 
+cat > w3.txt (+ctrl +C)- лучше через кат не делать
+
+
+7) Создать 3 папки - mkdir papka1 papka2 papka3 
+
+8. Вывести список содержимого папки - ls -la
+
+9) + Открыть любой txt файл - cat w1.txt 
+ 
+10) + написать туда что-нибудь, любой текст. - 
+cat >> w1.txt
+ hello, mentor! 
+I am Yulia)
+ (+enter)
+
+11) + сохранить и выйти. - ctrl+C
+или 
+
+9) + Открыть любой txt файл - vim w1.txt
+
+10) + написать туда что-нибудь, любой текст. - 
+i + 
+ hello, mentor! 
+I am Yulia)
+ (+enter)
+
+11) + сохранить и выйти. - esc+ :wq (+enter)
+12) Выйти из папки на уровень выше - cd ..
+
+—
+13) переместить 2 файла, которые вы создали, в любую другую папку. -
+ mv h1.json ww1.json work_1
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - 
+cp w1.txt ww1.txt papka2/
+
+15) Найти файла имени 
+find -name w1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -f w1.txt | grep hello
+
+17) вывести несколько первых строк из текстового файла head w1.txt- выведет 10 строк или head -5 w1.txt- выведет 5 строк
+18) вывести несколько последних строк из текстового файла tail w1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.- less w1.txt
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+$ curl http://162.55.220.72:5005/get_method?"name=(Yulia)&age=(27)"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+$ touch scritp1.sh
+$ vim script1.sh +i
+
+
+#!/ bin/bash
+cd homework1
+mkdir work4 work5 work6
+cd work4
+touch f1.txt f2.txt f3.txt f4.json f5.json
+mkdir papka4 papka5 papka6
+ls -la
+mv f1.txt f4.json papka4/ 
++esc :wq
+
+$ bash script1.sh
+
+
+
